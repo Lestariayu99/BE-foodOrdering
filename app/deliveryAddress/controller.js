@@ -106,9 +106,17 @@ const index = async(req, res, next) => {
   }
 }
 
+
+
 module.exports = {
   store,
   update,
   destroy,
   index
 }
+
+
+
+
+
+

@@ -27,6 +27,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+
 app.use(decodeToken());
 
 app.use('/auth', authRoute);
@@ -40,7 +42,7 @@ app.use('/api', invoiceRoute);
 // home
 app.use('/', function(req, res) {
   res.render('index', {
-    title: 'Eduwork API Service'
+    title: 'Eduwork API Server'
   });
 });
 
